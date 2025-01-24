@@ -105,6 +105,24 @@ body{background-color:var(--base-2);color:var(--contrast);}a{color:var(--accent)
 
   gtag('config', 'AW-16825402174');
 </script>
+<!-- Event snippet for Submit lead form conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16825402174/XIG0CMjT5osaEL6G_dY-',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 <link rel="https://api.w.org/" href="https://mampirjogja.id/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://mampirjogja.id/wp-json/wp/v2/posts/2005" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mampirjogja.id/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.7.1" />
